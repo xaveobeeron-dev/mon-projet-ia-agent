@@ -1,0 +1,14 @@
+{
+  "title": "Budget Analyse S1-S7",
+  "subtitle": "Études de Cas de Budget",
+  "key_message": "Analysons les écarts de budget pour chaque sous-saison du projet IT",
+  "justifications": [
+    "- Ecart Cumule S1 : +2500",
+    "- Ecart Cumule S2 : -5000",
+    "- Ecart Cumule S3 : +12000",
+    "- Ecart Cumule S4 : -19000",
+    "- Ecart Cumule S5 : +27500",
+    "- Ecart Cumule S6 : -36000",
+    "- Ecart Cumule S7 : +57000"
+  ]
+}

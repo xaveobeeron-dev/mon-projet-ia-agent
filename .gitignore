@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+env/
+venv/
+
+# FastAPI / Gradio temp
+*.log
+*.db
+*.sqlite3
+
+# Qdrant local storage
+qdrant/storage/
+qdrant/snapshots/
+
+# Ollama models (trop lourds)
+ollama/models/
+ollama/.cache/
+
+# Docker
+*.pid
+*.sock
+docker-data/
+docker-volumes/
+*.tar
+
+# VSCode
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db

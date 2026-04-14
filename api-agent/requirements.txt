@@ -1,0 +1,22 @@
+fastapi
+uvicorn
+requests
+qdrant-client==1.7.0
+python-multipart
+PyPDF2
+pypdf
+pandas
+openpyxl
+python-pptx
+matplotlib
+numpy
+pillow
+
+numpy<2
+torch==2.4.0+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+transformers==4.37.2
+sentence-transformers==2.6.1
+
+

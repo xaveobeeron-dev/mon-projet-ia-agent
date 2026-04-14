@@ -1,0 +1,51 @@
+services:
+  ollama-agent:
+    image: ollama/ollama
+    container_name: ollama-agent
+    ports:
+      - "12434:11434"
+    volumes:
+      - ollama_agent_data:/root/.ollama
+      - ./ollama-entrypoint.sh:/entrypoint.sh
+    entrypoint: ["/bin/sh", "/entrypoint.sh"]
+    restart: unless-stopped
+
+  api-agent:
+    build: ./api-agent
+    container_name: fastapi-backend-agent
+    ports:
+      - "8100:8000"
+    depends_on:
+      - ollama-agent
+      - qdrant-agent
+    environment:
+      OLLAMA_URL: "http://ollama-agent:11434"
+      QDRANT_URL: "http://qdrant-agent:6333"
+    volumes:
+      - ./api-agent:/app
+      - ./data-agent:/data-agent
+    restart: unless-stopped
+
+  qdrant-agent:
+    image: qdrant/qdrant
+    container_name: qdrant-agent
+    ports:
+      - "6433:6333"
+    volumes:
+      - qdrant_agent_data:/qdrant/storage
+    restart: unless-stopped
+
+  ui-agent:
+    build: ./ui-agent
+    container_name: gradio-ui-agent
+    ports:
+      - "7960:7860"
+    volumes:
+      - ./ui-agent:/app
+    depends_on:
+      - api-agent
+    restart: unless-stopped
+
+volumes:
+  ollama_agent_data:
+  qdrant_agent_data:
