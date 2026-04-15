@@ -23,13 +23,13 @@ from app.ppt_generator import generate_ppt_from_excel
 
 app = FastAPI()
 
-# --- Config ---
-OLLAMA_URL = "http://ollama-agent:11434"   # FIXED
+# --- Configuration ---
+OLLAMA_URL = "http://ollama-agent:11434"  
 OLLAMA_MODEL = "llama3.2:1b"
 QDRANT_URL = "http://qdrant-agent:6333"
 COLLECTION_NAME = "anomalies"
 EMBEDDING_DIM = 384
-DATA_DIR = "/data-agent"                  # FIXED (chemin local)
+DATA_DIR = "/data-agent"                  #(chemin local)
 
 # --- Session state ---
 LAST_INGEST = False
