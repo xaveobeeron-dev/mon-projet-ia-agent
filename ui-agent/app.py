@@ -4,9 +4,9 @@ import json
 import tempfile
 import os
 
-API_INGEST_URL = "http://fastapi-backend:8000/ingest_anomaly"
+API_INGEST_URL = "http://api-agent:8000/ingest_anomaly"
 API_PLAN_URL = "http://fastapi-backend:8000/generate_plan"
-API_RESET_QDRANT = "http://fastapi-backend:8000/reset_qdrant"
+API_RESET_QDRANT = "http://api-agent:8000/reset_qdrant"
 API_RESET_SESSION = "http://fastapi-backend:8000/reset_session"
 API_PPT_URL = "http://fastapi-backend-agent:8000/agent/ppt"   # <--- AJOUT
 
