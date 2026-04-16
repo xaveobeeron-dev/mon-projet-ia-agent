@@ -5,6 +5,7 @@ qdrant-client==1.7.0
 python-multipart
 PyPDF2
 pypdf
+pytest
 pandas
 openpyxl
 python-pptx
