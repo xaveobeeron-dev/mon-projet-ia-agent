@@ -179,6 +179,7 @@ def generate_plan(data: PromptInput):
 
 
 @app.post("/reset_qdrant")
+# reset_qdrant
 def reset_qdrant():
     try:
         qdrant.delete_collection(COLLECTION_NAME)
